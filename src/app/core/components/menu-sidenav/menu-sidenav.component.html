@@ -1,0 +1,134 @@
+<mat-drawer-container class="container" autosize>
+
+  <mat-drawer #drawer class="sidenav" mode="side">
+    
+    <!-- cadastros-basicos -->
+    <div>
+      <button mat-button [matMenuTriggerFor]="cadastrosBasicos">
+        <span class="menu-list-item">
+          Cadastros Básicos
+          <mat-icon>arrow_right</mat-icon>
+        </span>
+      </button>
+      <mat-menu #cadastrosBasicos="matMenu" xPosition="after">
+        <a mat-menu-item *ngFor="let item of subMenusCadastrosBasicos" [routerLink]="item.link">{{ item.text }}</a>
+      </mat-menu>
+    </div>
+
+    <!-- colaboradores -->
+    <div>
+      <button mat-button [matMenuTriggerFor]="colaboradores">
+        <span class="menu-list-item">
+          Colaboradores
+          <mat-icon>arrow_right</mat-icon>
+        </span>
+      </button>
+      <mat-menu #colaboradores="matMenu" xPosition="after">
+        <a mat-menu-item *ngFor="let item of subMenusColaboradores" [routerLink]="item.link">{{ item.text }}</a>
+      </mat-menu>
+    </div>
+
+    <!-- contratos -->
+    <div>
+      <button mat-button [matMenuTriggerFor]="contratos">
+        <span class="menu-list-item">
+          Contratos
+          <mat-icon>arrow_right</mat-icon>
+        </span>
+      </button>
+      <mat-menu #contratos="matMenu" xPosition="after">
+        <a mat-menu-item *ngFor="let item of subMenusContratos" [routerLink]="item.link">{{ item.text }}</a>
+      </mat-menu>
+    </div>
+
+    <!-- empresas -->
+    <div>
+      <button mat-button [matMenuTriggerFor]="empresas">
+        <span class="menu-list-item">
+          Empresas
+          <mat-icon>arrow_right</mat-icon>
+        </span>
+      </button>
+      <mat-menu #empresas="matMenu" xPosition="after">
+        <a mat-menu-item *ngFor="let item of subMenusEmpresas" [routerLink]="item.link">{{ item.text }}</a>
+      </mat-menu>
+    </div>
+
+    <!-- financeiro -->
+    <div>
+      <button mat-button [matMenuTriggerFor]="financeiro">
+        <span class="menu-list-item">
+          Financeiro
+          <mat-icon>arrow_right</mat-icon>
+        </span>
+      </button>
+      <mat-menu #financeiro="matMenu" xPosition="after">
+        <a mat-menu-item *ngFor="let item of subMenusFinanceiro" [routerLink]="item.link">{{ item.text }}</a>
+      </mat-menu>
+    </div>
+
+    <!-- interessados -->
+    <div>
+      <button mat-button [matMenuTriggerFor]="interessados">
+        <span class="menu-list-item">
+          Interessados
+          <mat-icon>arrow_right</mat-icon>
+        </span>
+      </button>
+      <mat-menu #interessados="matMenu" xPosition="after">
+        <a mat-menu-item *ngFor="let item of subMenusInteressados" [routerLink]="item.link">{{ item.text }}</a>
+      </mat-menu>
+    </div>
+
+    <!-- pauta -->
+    <div>
+      <button mat-button [matMenuTriggerFor]="pauta">
+        <span class="menu-list-item">
+          Pauta
+          <mat-icon>arrow_right</mat-icon>
+        </span>
+      </button>
+      <mat-menu #pauta="matMenu" xPosition="after">
+        <a mat-menu-item *ngFor="let item of subMenusPauta" [routerLink]="item.link">{{ item.text }}</a>
+      </mat-menu>
+    </div>
+
+    <!-- turma -->
+    <div  class="mb-16">
+      <button mat-button [matMenuTriggerFor]="turma">
+        <span class="menu-list-item">
+          Turma
+          <mat-icon>arrow_right</mat-icon>
+        </span>
+      </button>
+    
+      <mat-menu #turma="matMenu" xPosition="after">
+        <a mat-menu-item *ngFor="let item of subMenusTurma" [routerLink]="item.link">{{ item.text }}</a>
+      </mat-menu>
+    </div>
+
+    <mat-divider></mat-divider>
+
+    <!-- configuracao-empresa -->
+    <div class="mt-16">
+      <a routerLink="/configuracao-empresa" mat-button><span class="button-no-list-item">Configuração da empresa</span></a>
+    </div>
+
+    <!-- alterar-senha -->
+    <div>
+      <a routerLink="/alterar-senha" mat-button><span class="button-no-list-item">Alterar senha</span></a>
+    </div>
+
+  </mat-drawer>
+
+  <div class="sidenav-content">
+    <button mat-icon-button class="button-toggle" type="button" mat-button (click)="drawer.toggle()"><mat-icon>menu</mat-icon></button>
+
+    <div class="sidenav-content-dinamic">
+      <router-outlet></router-outlet>
+    </div>
+    
+  </div>
+
+</mat-drawer-container>
+

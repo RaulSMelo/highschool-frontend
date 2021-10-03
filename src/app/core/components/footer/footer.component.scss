@@ -1,0 +1,25 @@
+:host{
+
+    .footer{
+        position: fixed;
+        bottom: 0;
+        height: 3rem;
+        justify-content: flex-end;
+    }
+    
+    .footer span{
+        font-size: .8rem;
+        letter-spacing: 1px;
+        font-weight: 300;
+    }
+    
+    .footer span mat-icon{
+        color: #fd6e6e;
+        vertical-align: middle;
+    }
+    
+    .footer span .dev{
+        font-weight: 400;
+        font-style: italic;
+    }
+}

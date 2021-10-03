@@ -1,0 +1,41 @@
+:host{
+
+    .container {
+        width: 100%;
+        height: calc(100% - 6.5rem);
+    }
+ 
+    .sidenav {
+        display: flex;
+        flex-direction: column;
+        padding: 20px;
+    }
+    
+    .sidenav-content {
+        display: flex;
+        height: 100%;
+    }
+
+    .button-toggle{
+        margin: 0.5rem 0 1.5rem 0.5rem;
+    }
+
+    .menu-list-item{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        width: 10rem;
+    }
+
+    .button-no-list-item{
+        display: flex;
+        width: 10rem;
+    }
+
+    .sidenav-content-dinamic{
+        margin: 2rem 2rem 0 0.5rem;
+        width: 93%;
+        height: calc(100% - 3rem);
+    }
+ 
+}
